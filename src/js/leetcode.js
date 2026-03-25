@@ -161,6 +161,9 @@ const getCustomCommitMessage = problemContext => {
  * @param {string} problemName - The name of the problem to be added.
  */
 async function updateReadmeTopicTagsWithProblem(topicTags, problemName) {
+
+  return; // Disable automatic README updates.
+
   if (!topicTags) {
     console.log('No topic tags provided');
     return;
