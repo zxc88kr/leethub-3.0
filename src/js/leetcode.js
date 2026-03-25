@@ -1532,16 +1532,20 @@ const loader = (leetCode, suffix) => {
         );
       }
 
+      // Remove percentile info from commit messages.
       const problemContext = {
-        time: `${probStats.time} (${probStats.timePercentile}%)`,
-        space: `${probStats.space} (${probStats.spacePercentile}%)`,
+        // time: `${probStats.time} (${probStats.timePercentile}%)`,
+        // space: `${probStats.space} (${probStats.spacePercentile}%)`,
+        time: `${probStats.time}`,
+        space: `${probStats.space}`,
         language: language,
         problemName: problemName,
         difficulty: difficulty,
         date: getTodaysDate(),
         problemTopic: probStats.problemTopic,
       };
-      const probStatsCommitMsg = `Time: ${probStats.time} (${probStats.timePercentile}%), Space: ${probStats.space} (${probStats.spacePercentile}%) - LeetHub`; // default commit
+      // const probStatsCommitMsg = `Time: ${probStats.time} (${probStats.timePercentile}%), Space: ${probStats.space} (${probStats.spacePercentile}%) - LeetHub`; // default commit
+      const probStatsCommitMsg = `Time: ${probStats.time}, Space: ${probStats.space} - LeetHub`;
       const commitMsg = (await getCustomCommitMessage(problemContext)) || probStatsCommitMsg;
 
       const { useTimestampFilename = false } =
