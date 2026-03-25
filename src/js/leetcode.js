@@ -43,7 +43,9 @@ const readmeFilename = 'README.md';
 const defaultRepoReadme = "Contains topicwise list of solved problems.\n\n";
 
 // SubFolder
-const basePath = 'LeetCode';
+// Use a Korean top-level folder name for uploaded solutions.
+// const basePath = 'LeetCode';
+const basePath = '리트코드';
 
 /* Difficulty of most recenty submitted question */
 let difficulty = '';
